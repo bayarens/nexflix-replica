@@ -53,3 +53,15 @@ button {
 .card img {
   max-height: 100px;
 }
+
+#popMovie{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+#tRMovies{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
