@@ -8,7 +8,8 @@ class TVGenre extends React.Component {
 
         this.state = {
             genreMenu: [],
-            displayedCat: []
+            displayedCat: [],
+            selectedCat: ""
         }
     }
 
@@ -19,19 +20,25 @@ class TVGenre extends React.Component {
     }
 
     dropDownMenu = (e) => {
+        this.setState({ selectedCat: e.target.value})
         tvDiscover(e.target.value)
             .then(res => this.setState({ displayedCat: res.results }))
     }
 
+    convertIDtoString = (id) => {
+        return this.state.genreMenu.find(genre => genre.id == id).name
+    }
+
+
     render() {
         return (
             <div>
-                {this.state.genreMenu.length > 0 && <select onChange={this.dropDownMenu}>
-                    <option disabled selected value="">Categories</option>
+                {this.state.genreMenu.length > 0 && <select onChange={this.dropDownMenu} value={this.state.selectedCat}>
+                    <option disabled value="">Categories</option>
                     {this.state.genreMenu.map(genre => <option key={genre.id} value={genre.id}>{genre.name}</option>)}
                 </select>}
 
-                {this.state.displayedCat.length > 0 && <ContentReel list={this.state.displayedCat} title="selected category" ></ContentReel>}
+                {this.state.displayedCat.length > 0 && <ContentReel list={this.state.displayedCat} title={this.state.displayedCat} title={this.convertIDtoString(this.state.selectedCat)}></ContentReel>}
             </div>
         )
     }

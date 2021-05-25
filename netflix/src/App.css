@@ -59,7 +59,7 @@ button {
   display: flex;
   overflow: scroll;
   margin: 10px;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 #reel img{
@@ -107,6 +107,13 @@ body{
     width: 80px;
     opacity: 0.7;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button:hover{
+  color: indigo;
+  background-color: darkcyan;
+  transform: scale(1.05);
 }
 
 #searchButton{
@@ -114,6 +121,36 @@ body{
   width: 80px;
   opacity: 0.7;
   cursor: pointer;
+  transition: all 0.5s;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+}
+
+#searchButton span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#searchButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#searchButton:hover span {
+  padding-right: 10px;
+}
+
+#searchButton:hover span::after{
+  opacity: 1;
+  right: 0;
 }
 
 #inputBar{

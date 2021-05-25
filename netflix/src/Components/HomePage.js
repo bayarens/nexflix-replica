@@ -28,7 +28,7 @@ class searchBar extends React.Component {
 
                 <input type='text' value={this.state.search} onChange={this.changeSearch} id='inputBar'></input>
 
-                <button onClick={this.triggerSearch} id='searchButton'>Search</button>
+                <button onClick={this.triggerSearch} id='searchButton'><span>Search</span></button>
                 
                 
             </div>

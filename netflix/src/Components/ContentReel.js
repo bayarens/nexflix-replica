@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ContentReel(props) {
-    console.log(props.items)
     return (
         <div>
             <h3>{props.title}</h3>
