@@ -18,20 +18,22 @@ class searchBar extends React.Component {
 
     triggerSearch = async (e) => {
         let result = await searchAPI(this.state.search)
-        console.log(result, "<--- here")
-        this.setState({ results: result.results})
+        this.setState({ results: result.results })
     }
 
     render() {
         return (
+            <>
             <div id='search'>
 
-                <input type='text' value={this.state.search} onChange={this.changeSearch}></input>
+                <input type='text' value={this.state.search} onChange={this.changeSearch} id='inputBar'></input>
 
-                <button onClick={this.triggerSearch}>Search</button>
-
-                <ContentReel list={this.state.results} title="search results"/>
+                <button onClick={this.triggerSearch} id='searchButton'>Search</button>
+                
+                
             </div>
+            <ContentReel list={this.state.results} title='Search Results'/>
+            </>
         )
     }
 }

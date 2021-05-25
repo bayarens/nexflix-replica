@@ -2,10 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 export default function NavBar(props){
     return(
-        <div>
-            <Link to='/'>Home</Link>
-            <Link to='/movies'>Movies</Link>
-            <Link to='/tv'>TV</Link>
+        <div id='navBar'>
+            <Link to='/'> <button className="button">Home</button></Link>
+            <Link to='/movies'> <button className="button">Movies</button></Link>
+            <Link to='/tv'><button className="button">TV</button></Link>
         </div>
     )
 }

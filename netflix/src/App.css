@@ -47,7 +47,7 @@ button {
   flex-direction: column;
   width: 250px;
   height: 150px;
-  border: 1px solid rgb(199, 246, 236);
+  border: 1px solid rgb(2, 58, 46);
 }
 
 .card img {
@@ -55,13 +55,14 @@ button {
   width: 125px;
 }
 
-.reel{
+#reel{
   display: flex;
   overflow: scroll;
   margin: 10px;
+  justify-content: start;
 }
 
-.reel img{
+#reel img{
   height: 400px;
 }
 
@@ -71,12 +72,51 @@ button {
 
 #navBar{
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 20px;
 }
 
 #search{
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+}
+
+
+#overview{
+  max-height: 80px;
+  border: solid 1px black;
+  display: flex;
+  overflow: scroll;
+}
+
+body{
+  background-color: #96ACB7;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  min-height: 60px;
+}
+
+.button{
+  height: 44px;
+    width: 80px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#searchButton{
+  height: 35px;
+  width: 80px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#inputBar{
+  height: 30px;
+  width: 300px;
 }
