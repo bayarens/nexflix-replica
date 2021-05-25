@@ -52,16 +52,31 @@ button {
 
 .card img {
   max-height: 100px;
+  width: 125px;
 }
 
-#popMovie{
+.reel{
   display: flex;
-  flex-direction: row;
   overflow: scroll;
+  margin: 10px;
 }
 
-#tRMovies{
+.reel img{
+  height: 400px;
+}
+
+.contentCard{
+  margin: 10px;
+}
+
+#navBar{
+  display:flex;
+  justify-content: space-between;
+}
+
+#search{
   display: flex;
-  flex-direction: row;
-  overflow: scroll;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
