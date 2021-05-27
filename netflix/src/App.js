@@ -11,7 +11,7 @@ export default function App() {
     return (
         <div>
             <BrowserRouter>
-                <NavBar />
+                <NavBar/>
                 <Switch>
                     <Route exact path='/movies' component={DisplayMovie} />
                     <Route exact path='/tv' component={DisplayTV} />

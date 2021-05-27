@@ -86,9 +86,11 @@ button {
 
 #overview{
   max-height: 80px;
+  width: 265px;
   border: solid 1px black;
   display: flex;
   overflow: scroll;
+  color: antiquewhite;
 }
 
 body{
