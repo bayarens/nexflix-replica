@@ -13,9 +13,9 @@ export default function App() {
             <BrowserRouter>
                 <NavBar/>
                 <Switch>
-                    <Route exact path='/nexflix-replica/movies' component={DisplayMovie} />
-                    <Route exact path='/nexflix-replica/tv' component={DisplayTV} />
-                    <Route exact path='/nexflix-replica/' component={searchBar} />
+                    <Route exact path='/movies' component={DisplayMovie} />
+                    <Route exact path='/tv' component={DisplayTV} />
+                    <Route exact path='/' component={searchBar} />
                 </Switch>
             </BrowserRouter>
         </div>
