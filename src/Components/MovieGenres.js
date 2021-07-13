@@ -32,7 +32,7 @@ class MovieGenre extends React.Component {
     render() {
         return (
             <div>
-                {this.state.genreMenu.length > 0 && <select onChange={this.dropDownMenu} value={this.state.selectedCat}>
+                {this.state.genreMenu?.length > 0 && <select onChange={this.dropDownMenu} value={this.state.selectedCat}>
                     <option disabled value="">Categories</option>
                     {this.state.genreMenu.map(genre => <option key={genre.id} value={genre.id}>{genre.name}</option>)}
                 </select>}
