@@ -68,6 +68,10 @@ button {
 
 .contentCard{
   margin: 10px;
+  border: 2px solid darkblue;
+  padding: 5px;
+  box-shadow: 5px 10px rgb(56, 54, 54);
+  border-radius: 10px;
 }
 
 #navBar{
