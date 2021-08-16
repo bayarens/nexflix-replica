@@ -94,7 +94,7 @@ button {
   border: solid 1px black;
   display: flex;
   overflow: scroll;
-  color: black;
+  color: darkblue;
 }
 
 body{
